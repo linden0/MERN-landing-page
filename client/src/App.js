@@ -46,27 +46,24 @@ function App() {
     {error && <div className='bg-red-200 text-red-800 p-5 text-center'>{error}</div>}
     <div className="App h-screen grid text-center place-content-center">
       <section className=" flex flex-col gap-10">
-        <h1 className="text-6xl font-bold">notetaker</h1>
-        <p className="text-3xl max-w-3xl">Record lecture audio and generate notes instantly.</p>
-        <div style={{width: 'fit-content', margin: 'auto'}}>
-          <ul>
-            <li className="list-disc text-left">Professor doesn't record lecture?</li>
-            <li className="list-disc text-left">Zoned out in class and missed something important?</li>
-            <li className="list-disc text-left">Too lazy to take notes?</li>
-          </ul>
-        </div>
+        <h1 className="text-6xl font-bold">launchtok</h1>
+        <p className="text-3xl max-w-3xl">validate your ideas consistently by launching to 300 people guaranteed</p>
         {
           isEmailSubmitted ? 
             <p>Thanks for signing up! We'll be in touch.</p> : 
-            <form className="flex justify-center" onSubmit={handleEmailSubmit}>
-              <input placeholder="Enter email address" className="border-none bg-gray-200 p-2 focus:outline-none"/>
-              <button className="text-white bg-black p-2">Get Early Access</button>
-            </form>
+            <div>
+              <form className="flex justify-center" onSubmit={handleEmailSubmit}>
+                <input placeholder="Enter email address" className="border-none bg-gray-200 p-2 focus:outline-none"/>
+                <button className="text-white bg-black p-2">Get Early Access</button>
+              </form>
+              <p>$19 to make unlimited posts, free to browse</p>
+            </div>
+            
 
         }
         
         <div className="text-center">
-          <img className="m-auto" src={require("./img/notes.jpg")} alt="notetaker" />
+          <img className="m-auto w-3/6" src={require("./img/rocket.jpg")} alt="notetaker" />
         </div>
       </section>
     </div>
